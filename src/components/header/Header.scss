@@ -1,0 +1,205 @@
+@import '../../style/variables';
+.header {
+    height: 64px;
+    background-color: #090808;
+    padding-top: 16px;
+    &__content{
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    &__left-content {
+        width: 171px;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__humgurger {
+        cursor: pointer;
+        padding: 6px 3px;
+        span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: $grey-light;
+            margin-top: 3px;
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+    a {
+        height: 22px;
+    }
+    &__links {
+        display: block;
+        width: 273px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link{
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 140%;
+        color: $grey-dark;
+        &_activ {
+            color: $grey-light;
+        }
+    }
+
+    &__right-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 555px;
+        height: 32px;
+
+    }
+    &__wrapper {
+        display: block;
+        width: 77%;
+        height: 32px;
+        position: relative;
+        
+        // &:focus-within {
+        //     .header__placeholder {
+        //         display: none;
+        //     }
+        //     .header__icon-search {
+        //         display: block;
+        //     }
+        // }
+        
+        
+    }
+    &__icon-search {
+        display: none;
+        width: 20px;
+        pointer-events: none;
+        position: relative;
+        top: -24px;
+        margin-left: 8px;  
+    }
+    &__search {
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+        background-color: $main-color;
+        color: $grey-light;
+        padding: 7px 10px 8px 34px;
+        
+            &::-ms-clear {  display: none; width : 0; height: 0; }
+            &::-ms-reveal {  display: none; width : 0; height: 0; }
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration { display: none; }
+       
+    }
+    &__clearBtn {
+        
+        cursor: pointer;
+        position: absolute;
+        right: 14px;
+        top: 8px;
+        display: block;
+        height: 16px;
+        width: 16px;
+    }
+    
+
+    &__placeholder {
+        
+        pointer-events: none;
+        position: relative;
+        top: -23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-text {
+            margin-left: 4px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 17px;
+            letter-spacing: 0px;
+            color: $grey-dark;
+        }
+    }
+
+    &__selected {
+        cursor: pointer;
+        display: block;
+        
+    }
+    &__profil {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-img {
+            width: 32px;
+            height: 32px;
+        }
+        &-arrow{
+            width: 24px;
+            height: 24px;
+            padding-left: 7px;
+        }
+    }
+}
+
+.activeSearch {
+    .header{
+        &__wrapper {
+            display: block;
+            width: 100%;
+        }
+        &__left-content {
+            display: none;
+        }
+
+        &__right-content {
+            width: 100%;
+        }
+        &__profil {
+            display: none;
+        }
+    }
+}
+
+
+// &:focus {
+//     background-image: url(../../resources/icons/icon/search.svg);
+//     background-position: 10px center;
+//     background-repeat: no-repeat;
+//     padding: 7px 10px 8px 34px;
+// }
+// .active {
+//     background-image: url(../../resources/icons/icon/search.svg);
+//     background-position: 10px center;
+//     background-repeat: no-repeat;
+// }
+
+// &::-webkit-search-cancel-button { 
+//     -webkit-appearance: none; 
+//     width: 16px; /* размеры кастомного крестика */
+//     height: 16px;
+//     background: url(../../resources/icons/icon/btn-close-searc.svg); /* новый вид крестика */
+//     margin-right: 2px; /* его даже можно позиционировать */
+//     &:hover {
+//         background: url(../../resources/icons/icon/btn-close-searc-hover.svg);
+//     }
+// }
+
+// &::placeholder {
+//     text-align: center; 
+// }
